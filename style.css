@@ -1,0 +1,76 @@
+/* Logo menu lateral */
+.navbar-brand .glpi-logo,
+aside .navbar-brand .glpi-logo {
+  background: url("https://raw.githubusercontent.com/Gfctr/grupodamaso/refs/heads/main/css/img/grupodamaso.png")
+    no-repeat center / contain !important;
+  width: 200px;
+  height: 70px;
+}
+
+/* Logo da tela de login */
+.page-anonymous .glpi-logo {
+  content: url("https://raw.githubusercontent.com/Gfctr/grupodamaso/refs/heads/main/css/img/grupodamasologo.png") !important;
+  background: none !important;
+  -webkit-mask: none !important;
+  mask: none !important;
+  width: 250px !important;
+  height: auto !important;
+}
+
+/* Título "Faça login na sua conta" */
+.page-anonymous .card-body h2 {
+  font-size: 0 !important;
+  text-align: center !important;
+}
+
+.page-anonymous .card-body h2::after {
+  content: "Chamados e Gestão de Ativos\A Grupo Damaso";
+  white-space: pre-line;
+  display: block;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+/* Texto do botão "Entrar" */
+.page-anonymous button[type="submit"] {
+  font-size: 0 !important;
+}
+.page-anonymous button[type="submit"]::after {
+  content: "Acessar Chamados";
+  font-size: 1rem;
+}
+
+/* Esconde "Origem de login" (o select inteiro) */
+.page-anonymous .card-body .mb-3:has(select[name="auth"]) {
+  display: none !important;
+}
+
+/* Esconde "Lembrar de mim" */
+.page-anonymous .form-check {
+  display: none !important;
+}
+
+/* Esconde o rodapé inteiro: copyright e link Ajuda */
+.page-anonymous .text-center.text-muted,
+.page-anonymous .card + div,
+.page-anonymous a[href*="help"],
+.page-anonymous footer {
+  display: none !important;
+}
+
+/* Esconde o link/botão Ajuda na tela de login */
+.page-anonymous a:has(i.ti-help),
+.page-anonymous a:has(.ti-help),
+.page-anonymous a[href*="glpi-project"],
+.page-anonymous a[href*="faq"],
+.page-anonymous a[href*="doc"],
+.page-anonymous .text-center a {
+  display: none !important;
+}
+
+.page-anonymous button[type="submit"] {
+  background-color: #0a6fd8 !important;
+  border-color: #0a6fd8 !important;
+  color: #fff !important;
+}
